@@ -1,0 +1,51 @@
+{
+  "name": "dalset",
+  "version": "1.0.0",
+  "description": "dalset for nodejs",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "install": "echo 'not allow node-gyp rebuild'",
+    "lint": "eslint --ext .ts,.js src --fix",
+    "build": "tsc",
+    "tag": "git tag -a v$npm_package_version -m \"v$npm_package_version\"",
+    "cpp-local": "cross-env https_proxy=http://127.0.0.1:12639 prebuildify --napi -t 8.12.0",
+    "cpp-devnet": "cross-env https_proxy=http://devnet-proxy.oa.com:8080 prebuildify --napi -t 8.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anchel/dalset.git"
+  },
+  "keywords": [
+    "dalset"
+  ],
+  "author": "anchel",
+  "license": "MIT",
+  "dependencies": {
+    "ini": "^1.3.5",
+    "log4js": "^3.0.5",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "node-gyp-build": "^4.2.1",
+    "qs": "^6.9.1",
+    "sequelize-pool": "^6.0.0",
+    "xmlreader": "^0.2.3"
+  },
+  "devDependencies": {
+    "@types/mysql": "^2.15.9",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.22.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "node-addon-api": "^2.0.0",
+    "prebuildify": "^3.0.4",
+    "typescript": "^3.8.3"
+  }
+}

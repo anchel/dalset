@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAL RoleName="xnode_testrole" Version="2">
+  <PhysicalDBGroupPool>
+    <PhysicalDBGroup GroupId="14" DBHA="0">
+      <Master DBHost="9.134.199.178:3306" InstanceStatus="1" IDC="0" SemiSync="0"/>
+    </PhysicalDBGroup>
+  </PhysicalDBGroupPool>
+  <RoleSetPool>
+    <RoleSet SetId="0" SetName="default">
+      <Database Name="micro_ldm_online_systems_dev" TotalNum="1" Charset="utf8" PaddingZero="0" DataBaseNumSplit="0"/>
+      <TableConf>
+        <Table Name="T_XGNJMicroSvr" TotalNum="1" PaddingZero="0" SqlLog="0" ReportMMData="0" TableNumSplit="0" TableListComplete="0" SplitTableRule="1" VaildTableList=""/>
+        <Table Name="T_XGNJSupApp" TotalNum="1" PaddingZero="0" SqlLog="0" ReportMMData="0" TableNumSplit="0" TableListComplete="0" SplitTableRule="1" VaildTableList=""/>
+        <Table Name="T_tmp" TotalNum="1" PaddingZero="0" SqlLog="0" ReportMMData="0" TableNumSplit="0" TableListComplete="0" SplitTableRule="1" VaildTableList=""/>
+      </TableConf>
+      <DBGroupConf GroupNum="1">
+        <DBGroup Index="0" PhysicalDBGroupID="14" TryOnSlaveFail="0" DBListComplete="0" VaildDBList=""/>
+      </DBGroupConf>
+      <DBPrivilegeConf>
+        <Item ServiceName="mmpaynodeldmmicrosampledao" ServiceType="2" CmdId="0x0" Table="*"     ConnType="-2" Failover="0" User="xnode" Password="26e8d80567bc3553f1660325a035c51a9942c25d5b83e736b761f5db4e8502321dc9cde1"/>
+        <Item ServiceName="mmpaynodeldmmicrosampledao" ServiceType="2" CmdId="0x0" Table="T_tmp" ConnType="-2" Failover="0" User="xnode" Password="26e8d80567bc3553f1660325a035c51a9942c25d5b83e736b761f5db4e8502321dc9cde1"/>
+      </DBPrivilegeConf>
+    </RoleSet>
+  </RoleSetPool>
+</DAL>
